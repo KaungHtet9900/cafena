@@ -1,0 +1,497 @@
+<!doctype html>
+
+<!-- loader-->
+<div class="loader-container">
+    <div class="loader">
+        <h1>loading...</h1>
+    </div>
+</div>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coffee Shop</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Meta Tags — Preview, Edit and Generate</title>
+    <meta name="title" content="Meta Tags — Preview, Edit and Generate">
+    <meta name="description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.cafena.n0name.mms-student.com/">
+    <meta property="og:title" content="CAFENA Coffee Shop">
+    <meta property="og:description" content="You can get Fresh, Tasty & Healthy Coffee">
+    <meta property="og:image" content="images/screen.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://www.cafena.n0name.mms-student.com/">
+    <meta property="twitter:title" content="CAFENA Coffee Shop">
+    <meta property="twitter:description" content="You can get Fresh, Tasty & Healthy Coffee">
+    <meta property="twitter:image" content="images/screen.png">
+
+    <link rel="shortcut icon" href="images/logo.ico">
+
+    <style>
+        .loader-container{
+            background: var(--black);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            z-index: 5000;
+        }
+
+        .loader{
+            position: relative;
+            -webkit-box-reflect: below -20px linear-gradient(transparent, #0003);
+        }
+
+        .loader::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--main-color);
+            width: 2px;
+            height: 100%;
+            animation: blinkCursor 0.8s infinite;
+        }
+
+        @keyframes blinkCursor{
+            0%,75%{
+                opacity: 1;
+            }
+            76%,100%{
+                opacity: 0;
+            }
+        }
+
+        .loader h1{
+            position: relative;
+            color: var(--main-color);
+            letter-spacing: .5rem;
+            font-size: 5rem;
+            text-transform: uppercase;
+            animation: typing 8s steps(10) infinite;
+            overflow: hidden;
+        }
+
+        @keyframes typing{
+            0%,90%,100%{
+                width: 0;
+            }
+            30%,60%{
+                width: 378.95px;
+            }
+        }
+    </style>
+
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- scroll to to-->
+<a href="#home" class="scroll-to-top animate__animated">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<!--header-->
+<header class="header animate__animated animate__fadeInDown">
+    <a href="" class="logo animate__animated animate__fadeIn ani-delay-1">
+        <img src="images/logo.png" alt="">
+    </a>
+
+    <nav class="navbar">
+        <a href="#home" class="animate__animated animate__fadeIn ani-delay-15">home</a>
+        <a href="#about" class="animate__animated animate__fadeIn ani-delay-2">about</a>
+        <a href="#menu" class="animate__animated animate__fadeIn ani-delay-25">menu</a>
+        <a href="#products" class="animate__animated animate__fadeIn ani-delay-3">products</a>
+        <a href="#review" class="animate__animated animate__fadeIn ani-delay-35">review</a>
+        <a href="#contact" class="animate__animated animate__fadeIn ani-delay-4">contact</a>
+        <a href="#blogs" class="animate__animated animate__fadeIn ani-delay-45">blogs</a>
+    </nav> 
+
+    <div class="icons">
+        <div class="animate__animated animate__fadeIn ani-delay-5" id="search-btn">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="fas fa-shopping-cart animate__animated animate__fadeIn ani-delay-55" id="cart-btn"></div>
+        <div class="animate__animated animate__fadeIn ani-delay-25" id="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    
+    <div class="search-form">
+        <input type="search" id="search-box" placeholder="Search here ...">
+        <label for="search-box" class="fas fa-search"></label>
+    </div>
+
+    <div class="cart-item-container">
+        <div class="head">
+            <div class="black"></div>
+            <div class="close">
+                <i class="fas fa-times" id="close-cart-btn"></i>
+            </div>
+        </div>
+
+        <div class="cart-item">
+            <span class="fas fa-times"></span>
+            <img src="images/cart-item-1.png" alt="">
+            <div class="content">
+                <h3>cart item 01</h3>
+                <div class="price">$15.99/-</div>
+            </div>
+        </div>
+        <div class="cart-item">
+            <span class="fas fa-times"></span>
+            <img src="images/cart-item-2.png" alt="">
+            <div class="content">
+                <h3>cart item 02</h3>
+                <div class="price">$15.99/-</div>
+            </div>
+        </div>
+        <div class="cart-item">
+            <span class="fas fa-times"></span>
+            <img src="images/cart-item-3.png" alt="">
+            <div class="content">
+                <h3>cart item 03</h3>
+                <div class="price">$15.99/-</div>
+            </div>
+        </div>
+        <div class="cart-item">
+            <span class="fas fa-times"></span>
+            <img src="images/cart-item-4.png" alt="">
+            <div class="content">
+                <h3>cart item 04</h3>
+                <div class="price">$15.99/-</div>
+            </div>
+        </div>
+        <a href="#" class="btn">checkout now</a>
+    </div>
+</header>
+
+<!--home-->
+<section class="home wow animate__zoomIn ani-delay-1" id="home">
+    <div class="content">
+        <h3 class="wow animate__fadeIn ani-delay-15">fresh coffee in the morning</h3>
+        <p class="wow animate__fadeIn ani-delay-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cumque doloribus eligendi libero minima neque officia pariatur porro repudiandae, sit.</p>
+        <a href="#" class="btn wow animate__fadeIn ani-delay-25">get yours now</a>
+    </div>
+</section>
+
+<!--about-->
+<section class="about" id="about">
+    <div class="">
+        <h1 class="heading wow animate__zoomIn"><span class="">about</span> us</h1>
+
+    <div class="row">
+        <div class="image wow animate__fadeIn ani-delay-05">
+            <img src="images/about-img.jpeg" alt="">
+        </div>
+
+        <div class="content">
+            <h3 class="wow animate__fadeIn ani-delay-1">what makes our coffee special?</h3>
+            <p class="wow animate__fadeIn ani-delay-15">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam repellendus adipisci illo voluptates esse blanditiis id, temporibus facere praesentium dolor sunt! Et eligendi voluptas harum obcaecati nisi unde dolore quas!</p>
+            <p class="wow animate__fadeIn ani-delay-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quam nemo dolore necessitatibus fugit minus odit aperiam modi ex. Porro, voluptates commodi! Dolorem cumque nisi, deleniti illo labore tempora adipisci?</p>
+            <a href="#" class="btn wow animate__fadeIn ani-delay-25">learn more</a>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!--menu-->
+<section class="menu" id="menu">
+    <div class="">
+        <h1 class="heading wow animate__zoomIn">our <span>menu</span></h1>
+
+        <div class="box-container">
+            <div class="box wow animate__jackInTheBox ani-delay-05">
+                <img src="images/menu-1.png" alt="">
+                <h3>tasty and healthy</h3>
+                <div class="price">$15.99 <span>$20.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+
+            <div class="box wow animate__jackInTheBox ani-delay-1">
+                <img src="images/menu-2.png" alt="">
+                <h3>tasty and healthy</h3>
+                <div class="price">$15.99 <span>$20.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+
+            <div class="box wow animate__jackInTheBox ani-delay-15">
+                <img src="images/menu-3.png" alt="">
+                <h3>tasty and healthy</h3>
+                <div class="price">$15.99 <span>$20.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+
+            <div class="box wow animate__jackInTheBox ani-delay-2">
+                <img src="images/menu-4.png" alt="">
+                <h3>tasty and healthy</h3>
+                <div class="price">$15.99 <span>$20.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+
+            <div class="box wow animate__jackInTheBox ani-delay-25">
+                <img src="images/menu-5.png" alt="">
+                <h3>tasty and healthy</h3>
+                <div class="price">$15.99 <span>$20.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+
+            <div class="box wow animate__jackInTheBox ani-delay-3">
+                <img src="images/menu-6.png" alt="">
+                <h3>tasty and healthy</h3>
+                <div class="price">$15.99 <span>$20.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--products-->
+<section class="products" id="products">
+    <div class="">
+        <h1 class="heading wow animate__zoomIn">our <span>products</span></h1>
+
+        <div class="box-container">
+        <div class="box wow animate__slideInLeft ani-delay-05">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="images/product-1.png" alt="">
+            </div>
+            <div class="content">
+                <h3>fresh coffee</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">
+                    $15.99 <span>$20.99</span>
+                </div>
+            </div>
+        </div>
+        <div class="box wow animate__zoomIn ani-delay-15">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="images/product-2.png" alt="">
+            </div>
+            <div class="content">
+                <h3>fresh coffee</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">
+                    $15.99 <span>$20.99</span>
+                </div>
+            </div>
+        </div>
+        <div class="box wow animate__slideInRight ani-delay-1">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="images/product-3.png" alt="">
+            </div>
+            <div class="content">
+                <h3>fresh coffee</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">
+                    $15.99 <span>$20.99</span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!--review-->
+<section class="review" id="review">
+    <div class="">
+        <h1 class="heading wow animate__zoomIn">customer's <span>review</span></h1>
+        <div class="box-container">
+            <div class="box wow animate__flipInY ani-delay-05">
+                <img src="images/quote-img.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, at et saepe molestiae porro error dicta. Quis consequatur vero in aspernatur ratione architecto dolorem quod iure esse magni. Dolorum, aperiam!</p>
+                <img src="images/pic-1.png" class="user" alt="">
+                <h3>john deo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="box  wow animate__flipInX ani-delay-05">
+                <img src="images/quote-img.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, at et saepe molestiae porro error dicta. Quis consequatur vero in aspernatur ratione architecto dolorem quod iure esse magni. Dolorum, aperiam!</p>
+                <img src="images/pic-2.png" class="user" alt="">
+                <h3>john deo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="box  wow animate__flipInY ani-delay-05">
+                <img src="images/quote-img.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, at et saepe molestiae porro error dicta. Quis consequatur vero in aspernatur ratione architecto dolorem quod iure esse magni. Dolorum, aperiam!</p>
+                <img src="images/pic-3.png" class="user" alt="">
+                <h3>john deo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--contact-->
+<section class="contact" id="contact">
+    <div class="">
+        <h1 class="heading wow animate__zoomIn"><span>contact</span> us</h1>
+        <div class="row">
+            <iframe class="map wow animate__heartBeat ani-delay-05" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488797.7902159811!2d95.90137491709135!3d16.839609794833873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1949e223e196b%3A0x56fbd271f8080bb4!2sYangon!5e0!3m2!1sen!2smm!4v1634268539005!5m2!1sen!2smm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            <form action="">
+                <h3 class="wow animate__zoomIn ani-delay-1">get in touch</h3>
+
+                <div class="inputBox wow animate__zoomIn ani-delay-15">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="name">
+                </div>
+
+                <div class="inputBox wow animate__zoomIn ani-delay-2">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="email">
+                </div>
+
+                <div class="inputBox wow animate__zoomIn ani-delay-25">
+                    <span class="fas fa-phone-alt"></span>
+                    <input type="number" placeholder="number">
+                </div>
+
+                <input type="submit" value="contact now" class="btn wow animate__zoomIn ani-delay-3">
+            </form>
+        </div>
+    </div>
+</section>
+
+<!--blog-->
+<section class="blogs" id="blogs">
+    <div class="">
+        <h1 class="heading wow animate__zoomIn">our <span>blogs</span></h1>
+
+        <div class="box-container">
+            <div class="box wow animate__flip ani-delay-05">
+                <div class="image">
+                    <img src="images/blog-1.jpeg" alt="">
+                </div>
+
+                <div class="content">
+                    <a href="#" class="title">tasty and refreshing coffee</a>
+                    <span>by admin / 15th october, 2021</span>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="box wow animate__flip ani-delay-1">
+                <div class="image">
+                    <img src="images/blog-2.jpeg" alt="">
+                </div>
+
+                <div class="content">
+                    <a href="#" class="title">tasty and refreshing coffee</a>
+                    <span>by admin / 15th october, 2021</span>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="box wow animate__flip ani-delay-15">
+                <div class="image">
+                    <img src="images/blog-3.jpeg" alt="">
+                </div>
+
+                <div class="content">
+                    <a href="#" class="title">tasty and refreshing coffee</a>
+                    <span>by admin / 15th october, 2021</span>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f wow animate__fadeIn ani-delay-05"></a>
+        <a href="#" class="fab fa-twitter wow animate__fadeIn ani-delay-1"></a>
+        <a href="#" class="fab fa-instagram wow animate__fadeIn ani-delay-15"></a>
+        <a href="#" class="fab fa-linkedin wow animate__fadeIn ani-delay-2"></a>
+        <a href="#" class="fab fa-pinterest wow animate__fadeIn ani-delay-25"></a>
+    </div>
+
+    <div class="links">
+        <a href="#home" class="wow animate__fadeIn ani-delay-3">home</a>
+        <a href="#about" class="wow animate__fadeIn ani-delay-35">about</a> 
+        <a href="#menu" class="wow animate__fadeIn ani-delay-4">menu</a>
+        <a href="#products" class="wow animate__fadeIn ani-delay-45">products</a>
+        <a href="#review" class="wow animate__fadeIn ani-delay-5">review</a>
+        <a href="#contact" class="wow animate__fadeIn ani-delay-55">contact</a>
+        <a href="#blogs" class="wow animate__fadeIn ani-delay-6">blogs</a>
+    </div>
+
+    <div class="credit wow animate__fadeIn ani-delay-65">created by <span class="wow animate__zoomIn ani-delay-7">n0_name</span> | all rights reserved</div>
+</footer>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
+<script src="node_modules/wow.js/dist/wow.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
